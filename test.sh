@@ -11,7 +11,7 @@ ext=${2:-rpm}
 
 readonly url="http://www.oracle.com"
 readonly jdk_download_url1="$url/technetwork/java/javase/downloads/index.html"
-readonly jdk_download_url2=curl -s $jdk_download_url1 | grep -Po "\/technetwork\/java/\javase\/downloads\/jdk${jdk_version}-downloads-.+?\.html" | head -1
+readonly jdk_download_url2=curl $jdk_download_url1 | grep -Po "\/technetwork\/java/\javase\/downloads\/jdk${jdk_version}-downloads-.+?\.html" | head -1
 
 readonly jdk_download_url3="${url}${jdk_download_url2}"
 readonly jdk_download_url4=$(
